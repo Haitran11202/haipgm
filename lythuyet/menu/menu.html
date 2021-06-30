@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            text-decoration: none;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #282923;
+        }
+
+        .nav {
+            background: black;
+            display: flex;
+            height: 4em;
+            line-height: 4em;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 2em;
+            padding-left: 3em;
+        }
+
+        .menu {
+            display: flex
+        }
+
+        .menu li {
+            padding-right: 2.5em;
+            font-size: 17px;
+        }
+
+        .menu li a:hover {
+            color: #e32879;
+            transition: color .2s ease-out;
+        }
+
+        .menu_down {
+            background-color: black;
+            width: 180px;
+            height: 10em;
+            margin: 0 auto;
+            position: absolute;
+            line-height: 3em;
+            top: 65.2px;
+            right: 72px;
+            display: none;
+        }
+
+        .menu_down li {
+            text-align: center;
+            padding: 0;
+        }
+
+        .menu_down li a:hover {
+            color: #e32879;
+        }
+
+        .menu .menu_link:hover .menu_down {
+            display: block;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="#" class="logo">Hazze</a>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li class="menu_link">
+                <a href="#">About</a>
+                <ul class="menu_down">
+                    <li><a href="#">menu 1</a></li>
+                    <li><a href="#">menu 2</a></li>
+                    <li><a href="#">menu 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

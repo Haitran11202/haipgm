@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //vidu ve reduce , lam phang mang
+        var depthArray = [1, 2, [3, 4], 5, 6, [7, 8, 9]];
+        var flatArray = depthArray.reduce(function(flatOutput, depthItem) {
+            return flatOutput.concat(depthItem);
+        }, []);
+        console.log(flatArray);
+        // next excercise
+        var topics = [
+            {
+                topic: 'font-end',
+                courses: [
+                    {
+                        id: 1,
+                        title: "HTML-CSS"
+                    },
+                    {
+                        id: 2,
+                        title: "Javascript"
+                    }
+                ]
+            },
+            {
+                topic: 'Back-end',
+                courses: [
+                    {
+                        id: 1,
+                        title: "PHP"
+                    },
+                    {
+                        id: 2,
+                        title: "Node JS"
+                    }
+                ]
+            }
+        ];
+        var newCourses = topics.reduce(function(courses,topics){
+            return courses.concat(topics.courses);
+        },[]);
+        console.log(newCourses);
+        var html = newCourses.map(function(courses){
+            return `
+                <div>
+                    <h2>${courses.title}</h2>
+                    <p>ID: ${courses.id}</p>
+                </div>
+            `
+        });
+        console.log(html);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

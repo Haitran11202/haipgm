@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var cousre = [
+            {
+                id: 1,
+                name: 'javascript',
+                coin: 0
+            },
+            {
+                id: 2,
+                name:'HTML,CSS',
+                coin: 1
+            },
+            {
+                id: 3,
+                name: 'Ruby',
+                coin: 1
+            },
+            {
+                id: 4,
+                name: 'Java',
+                coin: 5
+            },
+            {
+                id: 5,
+                name:'C++',
+                coin: 10
+            }
+        ];
+        var newCourse = cousre.map(function(cousre,index){
+            // console.log(cousre)
+            // return {
+            //     id: cousre.id,
+            //     name: `Khoa hoc: ${cousre.name}`,
+            //     coin: cousre.coin,
+            //     coinText: `Gia: ${cousre.coin}`,
+            //     index: index,
+            //     originArray: cousre,
+            // };
+            return `<h2>${cousre.name}</h2>`;
+        });
+        // console.log(newCourse.join(''));
+
+        // var totalCoin = 0;
+        // for(var con of cousre){
+        //     totalCoin += con.coin;
+        // }
+        // console.log(totalCoin);
+        function coinHardler(accumulator,currentValue,currentIndex, originArray){
+            
+        }
+        var totalCoin = cousre.reduce(coinHardler,0);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Function</h3>
+    <p id="sum"></p>
+    <p id="person"></p>
+    <script>
+        var a = 10;
+        var b = 20;
+        function sumOfAAndb(a, b){
+            var x = a + b;
+            return x;
+        }
+        var sum = sumOfAAndb(12, 5);
+        function sumOfArray(start, end){
+            var s = 0;
+            for(var i = start ; i <end;i++){
+                s += i;
+            }
+            return s;
+        }
+        var sumOfArray = sumOfArray(10, 40);
+
+        function sayHello(message, name){
+            var msg = message + " " + name + "!";
+            return msg;
+        }
+        var ms = "Good morning";
+        var ms2 = "Good night";
+        var person = "Nguyen van a";
+        var person2 = "Tran thi c";
+        document.getElementById('sum').innerHTML = sayHello(ms,person);
+        document.getElementById('person').innerHTML = sayHello(ms2,person2);
+    </script>
+</body>
+
+</html>

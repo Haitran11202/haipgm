@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var product = [];
+        function tinh() {
+            var x = {};
+            x.title = document.getElementById("title").value;
+            x.price = document.getElementById("price").value;
+            x.sl = document.getElementById("sl").value;
+            x.tt = document.getElementById("tt").innerText = Number(x.sl) + Number(x.price);
+            product.push(x);
+            //tao the div dua vao the id
+            var iDiv = document.createElement("div");
+            iDiv.id = product.length;
+            document.getElementsByTagName("body")[0].appendChild(iDiv);
+            var element = document.getElementById(product.length);
+            //tao span va add vao div
+            var span = document.createElement("span");
+            var textSpan = document.createTextNode("Title: " + x.title + "------");
+            span.appendChild(textspan);
+            element.appendChild(span);
+            //add
+            var span = document.createElement("span");
+            var textSpan = document.createTextNode("Thanh tien: " + x.tt + "------");
+            span.appendChild(textspan);
+            element.appendChild(span);
+
+
+        }
+
+    </script>
+</head>
+
+<body>
+    San pham: <input type="text" id="title" />
+    Gia: <input type="text" id="price" />
+    So Luong: <input type="number" id="sl">
+    <button id="btn" onclick="tinh()">Tinh</button>
+    Thanh tien: <label id="tt"></label>
+    <div>
+        <h3>Thong tin gio hang</h3>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Thuoc tinh</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <p id="demo"></p>
+        <script>
+            var person = {
+                firstName: "Hai",
+                lastName: "Tran",
+                age:19,
+                move: function(){
+                    return "walk step by step";
+                },
+                fullName: function(){
+                    return this.firstName + " " + this.lastName;
+                }
+            }
+            person.laugh = function(){
+                return "Haha";
+            }
+            document.getElementById('demo').innerHTML = "Full Name: " +person.fullName() + " \nlaugh: "+person.laugh();
+        </script>
+    </body>
+</html>
